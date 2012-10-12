@@ -35,11 +35,11 @@ video_embed_url: "http://youtu.be/Id9JMHgWqiU"
 # NOTE: this only works for youtube video at the moment.  If its not for youtube, then just leave this property blank
 use_video_placeholder: false
 
-# Amazon settings -- you'll need an Amazon Payments account, sign up here --> http://bit.ly/SGksTv
+# Payments settings
+price:  19.95
+payment_description: "This is what will appear on your manage.stripe.com dashboard"
 
 # To find your access key and secret key, head over to here --> http://bit.ly/R4I4ky (Follow that guide in the Seller Central page)
-amazon_access_key: "YOUR_AMAZON_ACCESS_KEY"
-amazon_secret_key: "YOUR_AMAZON_SECRET_KEY"
 price: 	19.95
 
 # if use_payment_options is set to true, then a set of radio buttons will be displayed with various payment options.
@@ -53,6 +53,13 @@ payment_description: "Thanks for supporting Coderise!"
 # You probably should add some leeway to account for international shipping
 # this value will be added to the price to create a charge limit
 charge_limit: 25.00
+# Stripe settings -- you'll need a Stripe account, sign up here --> https://manage.stripe.com/register
+stripe_test_publishable_key:
+stripe_test_secret_key:
+stripe_live_publishable_key:
+stripe_live_secret_key:
+# Do you want to use Stripe in Live or Test mode? 'live' or 'test'
+stripe_payments_mode: 'test'
 
 # Stats settings
 
