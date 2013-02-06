@@ -15,7 +15,7 @@ project_goal: 10000
 product_name: "Coderise"
 
 # This will be used in sentences like Hooray Youve just reserved product_description
-product_description: "Empowerings through code"
+product_description: "Empowering kids through code"
 
 # An image showcasing your product -- it'll show up when you pin your product
 # It should be in app/assets/images
@@ -25,7 +25,7 @@ product_image_path: "my-product-image.png"
 value_proposition: "Contribute to Coderise!"
 
 # YouTube or Vimeo Video URL (The embed URL, without the query string options)
-video_embed_url: "https://www.youtube.com/v/D1L3o88GKew"
+video_embed_url: "http://youtu.be/Id9JMHgWqiU"
 
 # If set to true, then the image at "/assets/video_placeholder.png" will be shown in place of the youtube
 # video.  When the user clicks it, the vid will replace the image and start playing.
@@ -33,7 +33,7 @@ video_embed_url: "https://www.youtube.com/v/D1L3o88GKew"
 # NOTE: you can set this to false, and no image will be use - first frame of the video will be displayed
 #
 # NOTE: this only works for youtube video at the moment.  If its not for youtube, then just leave this property blank
-use_video_placeholder: true
+use_video_placeholder: false
 
 # Amazon settings -- you'll need an Amazon Payments account, sign up here --> http://bit.ly/SGksTv
 
@@ -47,7 +47,7 @@ price: 	19.95
 # put code in seeds.rb, then run rake db:seed
 use_payment_options: false
 
-payment_description: "Thank for supporting Coderise!"
+payment_description: "Thanks for supporting Coderise!"
 
 # Amazon limits how much we can charge people with their Multi-Use tokens.
 # You probably should add some leeway to account for international shipping
@@ -57,23 +57,23 @@ charge_limit: 25.00
 # Stats settings
 
 # On Lockitron, it's "backers"
-primary_stat: "backers"
+primary_stat: "supporters"
 # This'll show up in the tweet as, "I'm forker number ..."
-primary_stat_verb: 'backer'
+primary_stat_verb: 'Supporter'
 
 # The 2nd call to action button, towards the middle-ish of the page
-middle_reserve_text: "Reserve Now"
+middle_reserve_text: "Support"
 
 # When the project should end
-expiration_date: <%= DateTime.now + 29 %>
+expiration_date: <%= March 15.2013 + 10 %>
 
 # Text to show inside the progress bar, when the goal reaches/exceeds 100%
-progress_text: "Implemented"
+progress_text: "Sucess!"
 
 # Call to action section
 
 # On Lockitron, it's "First Batch Ships in March 2013"
-ships: "Ships...sometime"
+ships: ""
 
 # On Lockitron, it's "Reserve Now"
 call_to_action: "Reserve Now"
