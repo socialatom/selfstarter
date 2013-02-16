@@ -138,8 +138,6 @@ GEM
     stripe (1.7.4)
       multi_json (~> 1.1)
       rest-client (~> 1.4)
-    therubyracer (0.10.2)
-      libv8 (~> 3.3.10)
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -170,6 +168,5 @@ DEPENDENCIES
   shoulda
   sqlite3
   stripe
-  therubyracer
   thin
   uglifier (>= 1.0.3)

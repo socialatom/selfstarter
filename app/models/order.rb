@@ -22,9 +22,7 @@ class Order < ActiveRecord::Base
   end
 
   def generate_uuid!
-    begin
-      self.uuid = SecureRandom.hex(16)
-    end while Order.find_by_uuid(self.uuid).present?
+  	self.uuid = SecureRandom.hex(16)
   end
 
   # Implement these three methods to
@@ -33,18 +31,16 @@ class Order < ActiveRecord::Base
   end
 
   def self.percent
-    (Order.revenue.to_f / Order.goal.to_f) * 100.to_f
+    (Order.current.to_f / Order.goal.to_f) * 100.to_f
   end
 
   # See what it looks like when you have some backers! Drop in a number instead of Order.count
-  def self.backers
-    Order.where("token != ? OR token != ?", "", nil).count
+  def self.current
+    Order.count
   end
 
   def self.revenue
-    revenue = PaymentOption.joins(:orders).where("token != ? OR token != ?", "", nil).pluck('sum(amount)')[0]
-    return 0 if revenue.nil?
-    revenue
+    Order.current.to_f * Settings.price
   end
 
   validates_presence_of :name, :price, :user_id
